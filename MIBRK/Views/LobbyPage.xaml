@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="MIBRK.LobbyPage">
+  <RelativeLayout>
+    <Image Source="ubs.jpg" Opacity="0.2" Aspect="AspectFill"
+                RelativeLayout.WidthConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+    <Grid RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+
+
+			
+	    <StackLayout VerticalOptions="FillAndExpand"
+	         HorizontalOptions="FillAndExpand"
+	         Orientation="Vertical"
+	         Spacing="15" Padding="20, 100, 20, 20">
+
+			<Image Source="mibrklogo.png" />
+
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="0.5*" />
+					<ColumnDefinition Width="0.5*" />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="70" />
+					<RowDefinition Height="70" />
+					<RowDefinition Height="70" />
+				</Grid.RowDefinitions>
+					<Button x:Name="btnMyPolicies" Text="My Policies" VerticalOptions="Center" HorizontalOptions="Start" Image="lobby-mypolicies.png" 
+							Grid.Column="0" Grid.Row="0"  Clicked="OnMyPolicies" WidthRequest="170" HeightRequest="60"
+							FontSize="13" TextColor="#006699" BorderColor="Teal" BorderWidth="1" BorderRadius="6">
+					</Button>
+						
+					<Button x:Name="btnQuote" Text="Request Quote" VerticalOptions="Center" HorizontalOptions="Start" Image="lobby-quote.png" 
+							Grid.Column="1" Grid.Row="0" WidthRequest="170" HeightRequest="60"
+							FontSize="13" TextColor="#006699" BorderColor="Teal" BorderWidth="1" BorderRadius="6">
+					</Button>
+
+					<Button x:Name="btnIg" Text="Instagram" VerticalOptions="Center" HorizontalOptions="Start" Image="lobby-ig.png" 
+							Grid.Column="0" Grid.Row="1" WidthRequest="170" HeightRequest="60"  Clicked="OnOpenInstagram"
+							FontSize="13" TextColor="#006699" BorderColor="Teal" BorderWidth="1" BorderRadius="6">
+					</Button>
+
+					<Button x:Name="btnFb" Text="Facebook     " VerticalOptions="Center" HorizontalOptions="Start" Image="lobby-fb.png" 
+							Grid.Column="1" Grid.Row="1" WidthRequest="170" HeightRequest="60" Clicked="OnOpenFacebook"
+							FontSize="13" TextColor="#006699" BorderColor="Teal" BorderWidth="1" BorderRadius="6">
+					</Button>
+
+					<Button x:Name="btnTwitter" Text="Twitter" VerticalOptions="Center" HorizontalOptions="Start" Image="lobby-twitter.png" 
+							Grid.Column="0" Grid.Row="2" WidthRequest="170" HeightRequest="60" Clicked="OnOpenTwitter"
+							FontSize="13" TextColor="#006699" BorderColor="Teal" BorderWidth="1" BorderRadius="6">
+					</Button>
+
+					<Button x:Name="btnContact" Text="Conctact Us" VerticalOptions="Center" HorizontalOptions="Start" Image="lobby-contact.png" 
+							Grid.Column="1" Grid.Row="2" WidthRequest="170" HeightRequest="60"  Clicked="OnOpenContact"
+							FontSize="13" TextColor="#006699" BorderColor="Teal" BorderWidth="1" BorderRadius="6">
+					</Button>
+			</Grid>	
+			<Label Text="© 2017 Miami Insurance Brokers. All Rights Reserved." FontSize="Micro" HorizontalOptions="Center" />
+			<Label Text="MIBRK App Version 1.0" FontSize="Micro" HorizontalOptions="Center" />
+		</StackLayout>
+	
+			
+    </Grid>
+  </RelativeLayout>
+
+</ContentPage>

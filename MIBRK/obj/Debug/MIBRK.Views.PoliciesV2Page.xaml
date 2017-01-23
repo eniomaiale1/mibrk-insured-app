@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="MIBRK.PoliciesV2Page" Title="My Policies">
+	<StackLayout Padding="10,10,10,10">
+		<ActivityIndicator x:Name="spinner" Color="Red" IsRunning="true" />
+		<ListView x:Name="listView" RowHeight="80" IsVisible="false" ItemSelected="OnItemSelected">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="0.3*" />
+								<ColumnDefinition Width="0.7*" />
+							</Grid.ColumnDefinitions>
+							<Image Source="{Binding Image}"/>
+							<StackLayout Grid.Column="1" Orientation="Vertical" VerticalOptions="Center">
+								<Label Text="{Binding Type}" FontAttributes="Bold" />
+								<StackLayout Orientation="Horizontal">
+									<Label FontSize="14" TextColor="Teal" Text="Policy #:" />
+									<Label FontSize="14" TextColor="Teal" Text="{Binding PolicyNumber}" />
+								</StackLayout>
+								<StackLayout Orientation="Horizontal">
+									<Label FontSize="14" TextColor="Teal" Text="{Binding Path=Effective, StringFormat='{0:MM-dd-yyyy}'}" />
+									<Label FontSize="14" TextColor="Teal" Text="-" />
+									<Label FontSize="14" TextColor="Teal" Text="{Binding Path=Expiration, StringFormat='{0:MM-dd-yyyy}'}" />
+								</StackLayout>
+							</StackLayout>
+						</Grid>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>
+</ContentPage>

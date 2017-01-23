@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{8C2284E9-45E0-45DF-A80A-195539ECE3F5}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MIBRK/Views/LoginPage.xaml">
+    <Files>
+      <File FileName="MIBRK/Views/LoginPage.xaml" Line="29" Column="100" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MIBRK.Droid PreferredExecutionTarget="Android.Android_ARMv7a" />
+  <MonoDevelop.Ide.ItemProperties.MIBRK.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3F6A588F-D860-4676-8C86-AAB63F3C5D61" />
+</Properties>

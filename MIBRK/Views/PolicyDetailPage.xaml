@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="MIBRK.PolicyDetailPage" Title="Policy Detail">
+     <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="20, 20, 20, 20"
+                    Android="20, 20, 20, 20"
+                    WinPhone="20, 20, 20, 20" />
+     </ContentPage.Padding>
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="StartAndExpand">
+			<Image Source="{Binding Path=Image}"/>
+			<ScrollView>
+				<StackLayout VerticalOptions="StartAndExpand">
+					
+					<Label Text="Type" TextColor="Blue" />
+					<Label x:Name="type" Text="{Binding Path=Type}" />
+					<BoxView BackgroundColor="Silver" WidthRequest="1" HeightRequest="1"/>
+					
+					<Label Text="Effective Date" TextColor="Blue" />
+					<Label x:Name="effectiveDate" Text="{Binding Path=Effective, StringFormat='{0:MMMM dd, yyyy}'}" />
+					<BoxView BackgroundColor="Silver" WidthRequest="1" HeightRequest="1"/>
+					
+					<Label Text="Expiration Date" TextColor="Blue" />
+					<Label x:Name="expirationDate" Text="{Binding Path=Expiration, StringFormat='{0:MMMM dd, yyyy}'}" />
+					<BoxView BackgroundColor="Silver" WidthRequest="1" HeightRequest="1"/>
+					
+					<Label Text="Insurer" TextColor="Blue" />
+					<Label x:Name="insurer" Text="{Binding Path=Insurer}" />
+					<BoxView BackgroundColor="Silver" WidthRequest="1" HeightRequest="1"/>
+					
+					<Label Text="Policy Number" TextColor="Blue" />
+					<Label x:Name="number" Text="{Binding Path=PolicyNumber}" />
+					<BoxView BackgroundColor="Silver" WidthRequest="1" HeightRequest="1"/>
+					
+					<Label Text="Premium" TextColor="Blue" />
+					<Label x:Name="premium" Text="{Binding Path=Premium}" />
+					<BoxView BackgroundColor="Silver" WidthRequest="1" HeightRequest="1"/>
+					
+					<Label Text="Agent" TextColor="Blue" />
+					<Label x:Name="agent" Text="{Binding Path=Agent}" />
+					<BoxView BackgroundColor="Silver" WidthRequest="1" HeightRequest="1"/>
+
+				</StackLayout>
+			</ScrollView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

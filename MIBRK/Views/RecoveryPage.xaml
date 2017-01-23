@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MIBRK.RecoveryPage">
+     <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="20, 20, 20, 20"
+                    Android="20, 20, 20, 20"
+                    WinPhone="20, 20, 20, 20" />
+     </ContentPage.Padding>
+	<ContentPage.Content>
+	    <StackLayout VerticalOptions="FillAndExpand"
+	         HorizontalOptions="FillAndExpand"
+	         Orientation="Vertical"
+	         Spacing="15">
+			<Image Source="mibrk_big.jpg" />
+			<Entry x:Name="txtEmail" Placeholder="Email Address" Keyboard="Email" />
+			<Button x:Name="btnRecover" Text="Recover Password" Clicked="OnRecover" Style="{StaticResource buttonStyle}" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

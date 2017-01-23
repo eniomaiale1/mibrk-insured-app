@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:MIBRK;assembly=MIBRK"
+		x:Class="MIBRK.LoginPage">
+
+  <RelativeLayout>
+    <Image Source="ubs.jpg" Opacity="0.2" Aspect="AspectFill"
+                RelativeLayout.WidthConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+    <Grid RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+
+	    <StackLayout VerticalOptions="FillAndExpand"
+	         HorizontalOptions="FillAndExpand"
+	         Orientation="Vertical"
+	         Spacing="15" Padding="0, 120, 0, 0">
+
+
+		</StackLayout>
+	    <StackLayout VerticalOptions="FillAndExpand"
+	         HorizontalOptions="FillAndExpand"
+	         Orientation="Vertical"
+	         Spacing="15" Padding="20, 100, 20, 20">
+     		<Button x:Name="btnBack" Text="Back Home" VerticalOptions="Start" HorizontalOptions="Start" 
+				WidthRequest="100" HeightRequest="20" Clicked="OnBackHome"
+				FontSize="13" TextColor="#006699">
+			</Button>
+			<Image Source="mibrklogo.png" />
+			<Entry x:Name="txtUsername" Placeholder="Email Address" Keyboard="Email" BackgroundColor="Transparent" PlaceholderColor="Teal" >
+				<Entry.Behaviors>
+				  <local:EmailValidatorBehavior x:Name="emailValidator"/>
+				</Entry.Behaviors>
+			</Entry>
+			<Entry x:Name="txtPassword" IsPassword="true" Placeholder="Password" Keyboard="Default" BackgroundColor="Transparent" PlaceholderColor="Teal" />
+			<StackLayout Spacing="5" Orientation = "Horizontal">
+				<Label Text="Remember" FontSize="Medium" HorizontalOptions="Start" TextColor="Teal" />
+				<Switch />
+			</StackLayout>
+			<Button x:Name="btnLogin" Text="Login" Clicked="OnLogin" Style="{StaticResource buttonStyle}" />
+			<Button x:Name="btnRegister" Text="Register" Clicked="OnRegister" Style="{StaticResource buttonStyle}" />
+			<Button x:Name="btnRecover" Text="Recover Password" Clicked="OnRecover" Style="{StaticResource buttonStyle}" />
+			<Label Text="© 2017 Miami Insurance Brokers. All Rights Reserved." FontSize="Micro" HorizontalOptions="Center" />
+			<Label Text="MIBRK App Version 1.0" FontSize="Micro" HorizontalOptions="Center" />
+		</StackLayout>
+	
+			
+    </Grid>
+  </RelativeLayout>
+	
+
+</ContentPage>
